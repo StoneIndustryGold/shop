@@ -1,15 +1,28 @@
 package shop.pojo;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Size;
+
 public class Cellpones {
     private Integer id;
+    @Size(min=1,max=64,message="1~64字")
     private String brand ;//--牌子
+    @Size(min=1,max=64,message="1~64字")
     private String model;//-型号
+    @Size(min=1,max=64,message="1~64字")
     private String os;// --系统（IOS、Android、Windows Phone）
+    @Size(min=1,max=64,message="1~64字")
     private String cpubrand;//--品牌（高通、联发科）
+    @Min(1)
     private int ram ;//--内存
+    @Size(min=1,max=64,message="1~64字")
     private String color; //--颜色
-    private String description;//--描述                         
+    @Size(min=1,max=64,message="1~64字")
+    private String description;//--描述  
+    @Min(1)
     private int price;//--价格
+    @Size(min=1,max=64,message="1~64字")
     private String images;// --图片
 	public Integer getId() {
 		return id;

@@ -9,49 +9,63 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+	.field-error{
+		color: red;
+	}
+</style>
 </head>
 <body>
 	更新手机页面
-		<form action="" method="post">
-			<div>
+		<form:form action="" method="post" commandName="cellpones">
+			<div>  
 				<label for="brand">牌子</label>
-				<input type="text" name="brand" id="brand" value="${cellpones.brand }">
+				<form:input  path="brand" id="brand" value="${cellpones.brand }"/>
+				<form:errors path="brand" cssClass="field-error"></form:errors>
 			</div>
 			<div>
 				<label for="model">型号</label>
-				<input type="text" name="model" id="model" value="${cellpones.model }">
+				<form:input type="text" path="model" id="model" value="${cellpones.model }" />
+				<form:errors path="model" cssClass="field-error"></form:errors>
 			</div>
 			<div>
 				<label for="os">系统</label>
-				<input type="text" name="os" id="os" value="${cellpones.os }">
+				<form:input type="text" path="os" id="os" value="${cellpones.os }"/>
+				<form:errors path="os" cssClass="field-error"></form:errors>
 			</div>
 			<div>
 				<label for="cpubrand">平牌</label>
-				<input type="text" name="cpubrand" id="cpubrand" value="${cellpones.cpubrand }">
+				<form:input type="text" path="cpubrand" id="cpubrand" value="${cellpones.cpubrand }"/>
+				<form:errors path="cpubrand" cssClass="field-error"></form:errors>
 			</div>
 			<div>
 				<label for="ram">内存</label>
-				<input type="text" name="ram" id="ram" value="${cellpones.ram }">
+				<form:input type="text" path="ram" id="ram" value="${cellpones.ram }"/>
+				<form:errors path="ram" cssClass="field-error"></form:errors>
 			</div>
 			<div>
 				<label for="color">颜色</label>
-				<input type="text" name="color" id="color" value="${cellpones.color }">
+				<form:input type="text" path="color" id="color" value="${cellpones.color }"/>
+				<form:errors path="color" cssClass="field-error"></form:errors>
 			</div>
 			<div>
 				<label for="description">描述</label>
-				<input type="text" name="description" id="description" value="${cellpones.description }">
+				<form:input type="text" path="description" id="description" value="${cellpones.description }"/>
+				<form:errors path="description" cssClass="field-error"></form:errors>
 			</div>
 			<div>
 				<label for="price">价格</label>
-				<input type="text" name="price" id="price" value="${cellpones.price }">
+				<form:input type="text" path="price" id="price" value="${cellpones.price }"/>
+				<form:errors path="price" cssClass="field-error"></form:errors>
 			</div>
 			<div>
 				<label for="images">图片</label>
-				<input type="text" name="images" id="images" value="${cellpones.images }">
+				<form:input type="text" path="images" id="images" value="${cellpones.images }"/>
+				<form:errors path="images" cssClass="field-error"></form:errors>
 			</div>
 			<div>
 				<button type="submit">提交</button>
 			</div>
-		</form>
+		</form:form>
 </body>
 </html>

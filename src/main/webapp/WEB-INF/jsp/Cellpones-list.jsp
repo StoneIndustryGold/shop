@@ -20,9 +20,9 @@
 				<li><a href="${contextPath }/cellpones/${cellpones.id }/details">${cellpones.brand }</a></li>
 			
 				<a href="${contextPath }/cellpones/${cellpones.id }/update">编辑</a>		
-			</c:forEach>
-			
+			</c:forEach>			
 		</ul>
 	</div>
+		<a href="${contextPath }/cellpones/add">添加商品</a>
 </body>
 </html>
