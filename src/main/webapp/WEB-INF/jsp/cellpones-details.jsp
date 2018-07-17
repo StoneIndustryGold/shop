@@ -20,8 +20,7 @@
 			<li>${cellpones.color }</li>
 			<li>${cellpones.description }</li>
 			<li>${cellpones.price }</li>
-			
-		
+					
 		</ul>
 	</div>
 </body>

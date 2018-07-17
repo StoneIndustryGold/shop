@@ -23,7 +23,7 @@ public class CellponesController {
 	}
 
 
-
+	//手机集合页面
 	@RequestMapping(method=RequestMethod.GET,value="/Cellpones/list")
 	public String cellponesFind(Model model) {
 		System.out.println("测试");
@@ -31,16 +31,19 @@ public class CellponesController {
 		
 		model.addAttribute("cellpones", cellpones);
 		return "Cellpones-list";
-	}
+	}//详情页
 	@RequestMapping(method=RequestMethod.GET,value="/cellpones/{id}/details")
 	public String cellponesDetails(@PathVariable int id,Model model) {
 		Cellpones  cellpones=cellponesService.findOne(id);
 		model.addAttribute("cellpones", cellpones);
 		return "cellpones-details";
 	}
+	//更新页面
 	@RequestMapping(method=RequestMethod.GET,value="/cellpones/{id}/update")
-	public String cellponesUpdate(@PathVariable int id) {
-		
+	public String cellponesUpdate(@PathVariable int id,Model model) {
+		Cellpones  cellpones=cellponesService.findOne(id);
+		model.addAttribute("cellpones", cellpones);
 		return"cellpones-update";
 	}
+	
 }
