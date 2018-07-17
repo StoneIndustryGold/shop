@@ -22,4 +22,7 @@
  					#{brand},#{model},#{os},#{cpubrand},#{ram},#{color},
  					#{description},#{price},#{images})
   			</insert>
+  			<delete id="detele">
+  				delete from  cellpones  where id=#{id}
+  			</delete>
   </mapper>

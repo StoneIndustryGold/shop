@@ -79,8 +79,9 @@ public class CellponesController {
 		return"redirect:/Cellpones/list";
 	}
 	@RequestMapping(method=RequestMethod.POST,value="/cellpones/{id}/detele")
-	public String delete(@PathVariable int id) {
+	public String delete(@PathVariable Integer id) {
 		System.out.println(""+id);
+		cellponesService.detele(id);
 		return "redirect:/Cellpones/list";
 	}
 }

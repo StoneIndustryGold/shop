@@ -12,4 +12,6 @@ public interface CellponesMapper {
 	void update(Cellpones cellpones);
 	
 	void insertinto(Cellpones cellpones);
+	
+	void detele(Integer id);
 }

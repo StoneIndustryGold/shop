@@ -45,4 +45,11 @@ public class CellponesImpl implements CellponesService {
 		
 	}
 
+
+	@Override
+	public void detele(Integer id) {
+		CellponesMapper.detele(id);
+		
+	}
+
 }
