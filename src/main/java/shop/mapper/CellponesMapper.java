@@ -10,4 +10,6 @@ public interface CellponesMapper {
 	Cellpones findOne(int id);
 	
 	void update(Cellpones cellpones);
+	
+	void insertinto(Cellpones cellpones);
 }

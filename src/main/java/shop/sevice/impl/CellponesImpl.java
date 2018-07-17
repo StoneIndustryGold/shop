@@ -38,4 +38,11 @@ public class CellponesImpl implements CellponesService {
 		
 	}
 
+
+	@Override
+	public void insertinto(Cellpones cellpones) {
+		CellponesMapper.insertinto(cellpones);
+		
+	}
+
 }

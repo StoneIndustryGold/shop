@@ -59,19 +59,28 @@ public class CellponesController {
 		cellponesService.update(cellpones);
 		return "redirect:/Cellpones/list";
 	}
+	//添加商品
 	@RequestMapping(method=RequestMethod.GET,value="/cellpones/add")
-	public String cellponesAdd(@ModelAttribute Cellpones cellpones ,Model model) {
+	public String cellponesAdd(@ModelAttribute Cellpones cellpones ,
+			Model model) {
 		
 		return"cellpones-update";
 	}
+	//添加商品
 	@RequestMapping(method=RequestMethod.POST,value="/cellpones/add")
 	public String add(@ModelAttribute @Valid Cellpones cellpones,
 									BindingResult bindingResult,
 									Model model) {
-		if(bindingResult.hasErrors()) {
-			
+		System.out.println(""+cellpones.getBrand());
+		if(bindingResult.hasErrors()) {			
 			return"cellpones-update";
 		}
+		cellponesService.insertinto(cellpones);
 		return"redirect:/Cellpones/list";
+	}
+	@RequestMapping(method=RequestMethod.POST,value="/cellpones/{id}/detele")
+	public String delete(@PathVariable int id) {
+		System.out.println(""+id);
+		return "redirect:/Cellpones/list";
 	}
 }

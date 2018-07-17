@@ -11,18 +11,30 @@
 </head>
 <body>
 	<h3>手机商城</h3>
+	
+	
 	<div>
 		<ul>
 			<c:forEach items="${cellpones }" var="cellpones">
 				<li>${cellpones.id }</li>
 				
 				<a href="${contextPath }/cellpones/${cellpones.id }/details">${cellpones.images }</a>
-				<li><a href="${contextPath }/cellpones/${cellpones.id }/details">${cellpones.brand }</a></li>
-			
-				<a href="${contextPath }/cellpones/${cellpones.id }/update">编辑</a>		
+				<li><a href="${contextPath }/cellpones/${cellpones.id }/details">${cellpones.brand }</a>
+				
+				<form action="${contextPath }/cellpones/${cellpones.id }/detele" method="post">
+					<button type="submit">删除商品</button>
+				</form>
+				</li>			
+				<a href="${contextPath }/cellpones/${cellpones.id }/update">编辑商品</a><br>										
 			</c:forEach>			
 		</ul>
 	</div>
+	<div>
 		<a href="${contextPath }/cellpones/add">添加商品</a>
+	</div>
+	
 </body>
 </html>
+
+
+

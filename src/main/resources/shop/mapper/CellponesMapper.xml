@@ -16,4 +16,10 @@
 					COLOR=#{color},DESCRIPTION=#{description},PRICE=#{price},IMAGES=#{images}
 				where id=#{id}
   			</update>
+  			
+  			<insert id="insertinto">
+  					insert into cellpones values(cellpones_seq.nextval,
+ 					#{brand},#{model},#{os},#{cpubrand},#{ram},#{color},
+ 					#{description},#{price},#{images})
+  			</insert>
   </mapper>
