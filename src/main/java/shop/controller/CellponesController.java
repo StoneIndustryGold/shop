@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -28,11 +29,18 @@ public class CellponesController {
 		System.out.println("测试");
 		List<Cellpones> cellpones=cellponesService.findAll();
 		
-		for(Cellpones c:cellpones) {
-			
-			System.out.println("测试二"+c.getBrand());
-		}
 		model.addAttribute("cellpones", cellpones);
 		return "Cellpones-list";
+	}
+	@RequestMapping(method=RequestMethod.GET,value="/cellpones/{id}/details")
+	public String cellponesDetails(@PathVariable int id,Model model) {
+		Cellpones  cellpones=cellponesService.findOne(id);
+		model.addAttribute("cellpones", cellpones);
+		return "cellpones-details";
+	}
+	@RequestMapping(method=RequestMethod.GET,value="/cellpones/{id}/update")
+	public String cellponesUpdate(@PathVariable int id) {
+		
+		return"cellpones-update";
 	}
 }

@@ -5,6 +5,9 @@
   <mapper namespace="shop.mapper.CellponesMapper">
   			<select id="findAll" resultType="Cellpones">
   			
-  			 select * from cellpones
+  			 	select * from cellpones
+  			</select>
+  			<select id="findOne" resultType="Cellpones">
+  				 select * from cellpones where id=#{id}
   			</select>
   </mapper>

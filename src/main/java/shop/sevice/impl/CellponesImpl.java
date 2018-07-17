@@ -24,4 +24,11 @@ public class CellponesImpl implements CellponesService {
 		return CellponesMapper.findAll();
 	}
 
+
+	@Override
+	public Cellpones findOne(int id) {
+		// TODO Auto-generated method stub
+		return CellponesMapper.findOne(id);
+	}
+
 }

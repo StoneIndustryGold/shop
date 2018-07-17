@@ -15,15 +15,11 @@
 		<ul>
 			<c:forEach items="${cellpones }" var="cellpones">
 				<li>${cellpones.id }</li>
-				<li>${cellpones.brand }</li>
-				<li>${cellpones.model }</li>
-				<li>${cellpones.os }</li>
-				<li>${cellpones.cpubrand }</li>
-				<li>${cellpones.ram }</li>
-				<li>${cellpones.color }</li>
-				<li>${cellpones.description }</li>
-				<li>${cellpones.price }</li>
-				<li>${cellpones.images }</li><br>			
+				
+				<a href="${contextPath }/cellpones/${cellpones.id }/details">${cellpones.images }</a>
+				<li><a href="${contextPath }/cellpones/${cellpones.id }/details">${cellpones.brand }</a></li>
+			
+				<a href="${contextPath }/cellpones/${cellpones.id }/update">编辑</a>		
 			</c:forEach>
 			
 		</ul>

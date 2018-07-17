@@ -6,4 +6,6 @@ import shop.pojo.Cellpones;
 
 public interface CellponesMapper {
 	List<Cellpones> findAll();
+	
+	Cellpones findOne(int id);
 }
