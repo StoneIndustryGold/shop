@@ -8,4 +8,6 @@ public interface CellponesMapper {
 	List<Cellpones> findAll();
 	
 	Cellpones findOne(int id);
+	
+	void update(Cellpones cellpones);
 }

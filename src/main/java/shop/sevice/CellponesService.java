@@ -8,4 +8,6 @@ public interface CellponesService {
 	List<Cellpones> findAll();
 
 	Cellpones findOne(int id);
+	
+	void update(Cellpones cellpones);
 }

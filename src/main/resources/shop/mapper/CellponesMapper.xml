@@ -10,4 +10,10 @@
   			<select id="findOne" resultType="Cellpones">
   				 select * from cellpones where id=#{id}
   			</select>
+  			<update id="update">
+  				update cellpones set 
+					brand=#{brand},MODEL=#{model},OS=#{os},CPUBRAND=#{cpubrand},RAM=#{ram},
+					COLOR=#{color},DESCRIPTION=#{description},PRICE=#{price},IMAGES=#{images}
+				where id=#{id}
+  			</update>
   </mapper>

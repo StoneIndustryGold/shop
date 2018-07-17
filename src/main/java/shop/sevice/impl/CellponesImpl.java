@@ -31,4 +31,11 @@ public class CellponesImpl implements CellponesService {
 		return CellponesMapper.findOne(id);
 	}
 
+
+	@Override
+	public void update(Cellpones cellpones) {
+		CellponesMapper.update(cellpones);
+		
+	}
+
 }

@@ -35,11 +35,11 @@
 			</div>
 			<div>
 				<label for="color">颜色</label>
-				<input type="text" name="color" id="color" value="${cellpones.brand }">
+				<input type="text" name="color" id="color" value="${cellpones.color }">
 			</div>
 			<div>
 				<label for="description">描述</label>
-				<input type="text" name="description" id="description" value="${cellpones.color }">
+				<input type="text" name="description" id="description" value="${cellpones.description }">
 			</div>
 			<div>
 				<label for="price">价格</label>
