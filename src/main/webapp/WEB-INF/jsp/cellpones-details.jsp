@@ -2,14 +2,9 @@
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <c:set var="contextPath" value="${pageContext.request.contextPath}"></c:set>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-	手机详情页
+	<%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
+
+<t:layout><!-- 把详情页传往layout.tag页面 -->
 	<div>
 		<ul>
 			
@@ -25,5 +20,4 @@
 					
 		</ul>
 	</div>
-</body>
-</html>
+</t:layout>

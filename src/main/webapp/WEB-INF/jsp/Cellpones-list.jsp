@@ -3,15 +3,11 @@
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <c:set var="contextPath" value="${pageContext.request.contextPath}"></c:set>
     <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-	
+	<%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+
+<t:layout>
+
 	<h3>手机商城</h3>
 										<!-- 取得路劲下的图片，于jsp同级目录下开始                                    限制图片宽                    高度     -->
 	<img src="${pageContext.request.contextPath}/assets/images/cellpone/cellpone_01.png"width="190" height="300" align="middle" >
@@ -22,7 +18,7 @@
 				<li>
 				<a href="${contextPath }/cellpones/${cellpones.id }/details">
 					<!--图片路径--获得当前的父文件的--同级文件 /下/下/下/${数据库取值文件名}-->
-				  <img  src="${contextPath}/assets/images/cellpone/${cellpones.images }"></a></li>
+				 <img  src="${contextPath}/assets/images/cellpone/${cellpones.images }"></a></li>
 				<li><a href="${contextPath }/cellpones/${cellpones.id }/details">${cellpones.brand }</a>
 				
 				<form action="${contextPath }/cellpones/${cellpones.id }/detele" method="post">
@@ -36,9 +32,7 @@
 	<div>
 		<a href="${contextPath }/cellpones/add">添加商品</a>
 	</div>
-	
-</body>
-</html>
+	</t:layout>
 
 
 
