@@ -12,6 +12,8 @@ import org.springframework.core.env.Environment;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.transaction.PlatformTransactionManager;
@@ -21,12 +23,14 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-@Configuration//����������
-@ComponentScan(basePackages="shop")//ɨ�趥���
+@Configuration//生名组件
+@ComponentScan(basePackages="shop")//扫描顶层包
 @EnableWebMvc //����web mvc������ʩ֧��
-@MapperScan("shop.mapper")
+@MapperScan("shop.mapper")//扫描mapper包
 @PropertySource("classpath:jdbc.properties")
-@EnableTransactionManagement // ����spring����֧��
+@EnableTransactionManagement //开启事务支持
+@EnableScheduling//开启调度支持
+@EnableAsync//开启异步执行任务支持
 public class AppCongfig extends WebMvcConfigurerAdapter{
 	@Override//��д    
 	//��д configigureVieweRsolvers����
@@ -62,7 +66,7 @@ public class AppCongfig extends WebMvcConfigurerAdapter{
 		 
 	}
 	// spring������Ҫ���������������������ύ��ع�����
-		@Bean
+		@Bean//事务的支持
 		public PlatformTransactionManager transactionManager(DataSource dataSource) {
 		    // ����������mybatisЭ����ʵ���࣬���õ���hibernate��JPA����ôʵ���಻һ��
 		    return new DataSourceTransactionManager(dataSource);

@@ -4,11 +4,13 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import shop.mapper.CellponesMapper;
 import shop.pojo.Cellpones;
 import shop.sevice.CellponesService;
 @Service
+@Transactional//获得事务的支持
 public class CellponesImpl implements CellponesService {
 	private CellponesMapper CellponesMapper;
 	
