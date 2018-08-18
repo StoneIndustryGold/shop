@@ -6,6 +6,7 @@
 		
 	</head>
 	<body>
+	你好世界
 		<div class="header">
 			<ul>
 				<li><a href="${contextPath }/Cellpones/list">手机列表</a></li>

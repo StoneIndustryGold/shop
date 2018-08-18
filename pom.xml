@@ -13,6 +13,27 @@
 	</properties>
 
 	<dependencies>
+		<dependency><!--开启freema rker的支持有蛮多 -->
+	        <groupId>org.springframework</groupId>
+	        <artifactId>spring-context-support</artifactId>
+	        <version>4.3.18.RELEASE</version>
+	    </dependency>  
+	    <dependency>
+	        <groupId>org.springframework</groupId>
+	        <artifactId>spring-webmvc</artifactId>
+	        <version>4.3.18.RELEASE</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>org.hibernate.validator</groupId>
+	        <artifactId>hibernate-validator</artifactId>
+	        <version>6.0.10.Final</version>
+	    </dependency>
+	    <dependency>
+		    <groupId>org.freemarker</groupId>
+		    <artifactId>freemarker</artifactId>
+		    <version>2.3.28</version>
+	    </dependency> <!-- freeMarker结束 -->
+	    
 		<dependency><!-- java、spring开源web 。mvc -->
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
@@ -88,6 +109,11 @@
 			<artifactId>spring-jdbc</artifactId>
 			<version>4.3.18.RELEASE</version>
 		</dependency>
+		<dependency><!--开启freemarker支持  -->
+		     <groupId>org.freemarker</groupId>
+		     <artifactId>freemarker</artifactId>
+		     <version>2.3.28</version>
+    	</dependency> 
 		<dependency><!-- 真的密码加密器 -->
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-crypto</artifactId>
